@@ -1,7 +1,6 @@
 import React from 'react';
 import { Form, Input, Button } from 'antd';
 
-
 class RegistrationForm extends React.Component {
     state = {
         confirmDirty: false,
@@ -66,7 +65,7 @@ class RegistrationForm extends React.Component {
         };
 
         return (
-            <Form {...formItemLayout} onSubmit={this.handleSubmit}>
+            <Form {...formItemLayout} onSubmit={this.handleSubmit} className="register">
                 <Form.Item
                     label="Username"
                 >

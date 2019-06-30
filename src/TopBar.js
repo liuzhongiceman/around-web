@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from "./logo.svg"
+import logo from './logo.svg';
 
-export class TopBar extends React.Component{
+export class TopBar extends React.Component {
     render() {
-        return(
+        return (
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <span className="App-title">Around</span>
             </header>
-        )
+        );
     }
 }

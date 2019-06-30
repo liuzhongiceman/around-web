@@ -1,17 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import {TopBar} from './TopBar';
-import {Register} from './Register';
+import { TopBar } from './TopBar';
+import { Main } from './Main';
+
 import './App.css';
 
-
 function App() {
-  return (
-    <div className="App">
-        <TopBar/>
-        <Register/>
-    </div>
-  );
+    return (
+        <div className="App">
+            <TopBar/>
+            <Main/>
+        </div>
+    );
 }
 
 export default App;
