@@ -1,17 +1,5 @@
 import React from 'react';
-
-import {
-    Form,
-    Input,
-    Tooltip,
-    Icon,
-    Select,
-    Button,
-    AutoComplete,
-} from 'antd';
-
-const { Option } = Select;
-const AutoCompleteOption = AutoComplete.Option;
+import { Form, Input, Button } from 'antd';
 
 
 class RegistrationForm extends React.Component {
@@ -51,10 +39,8 @@ class RegistrationForm extends React.Component {
         callback();
     };
 
-
     render() {
         const { getFieldDecorator } = this.props.form;
-        const { autoCompleteResult } = this.state;
 
         const formItemLayout = {
             labelCol: {
@@ -79,21 +65,13 @@ class RegistrationForm extends React.Component {
             },
         };
 
-
         return (
             <Form {...formItemLayout} onSubmit={this.handleSubmit}>
                 <Form.Item
-                    label={
-                        <span>
-              Nickname&nbsp;
-                            <Tooltip title="What do you want others to call you?">
-                <Icon type="question-circle-o" />
-              </Tooltip>
-            </span>
-                    }
+                    label="Username"
                 >
-                    {getFieldDecorator('nickname', {
-                        rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
+                    {getFieldDecorator('username', {
+                        rules: [{ required: true, message: 'Please input your username!' }],
                     })(<Input />)}
                 </Form.Item>
                 <Form.Item label="Password" hasFeedback>
@@ -133,4 +111,3 @@ class RegistrationForm extends React.Component {
 }
 
 export const Register = Form.create({ name: 'register' })(RegistrationForm);
-
