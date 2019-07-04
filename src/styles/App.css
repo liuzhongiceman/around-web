@@ -2,6 +2,7 @@
 @import 'Register.css';
 @import '../components/Main.css';
 @import "Login.css";
+@import "TopBar.css";
 
 .App {
   text-align: center;
